@@ -1,0 +1,32 @@
+POST http://127.0.0.1:5000/api/auth/register/
+Content-Type: application/json
+
+{
+    "name": "kevin",
+    "email": "kevin@test.com",
+    "password": "password"
+}
+###
+POST http://127.0.0.1:5000/api/auth/login/
+Content-Type: application/json
+
+{
+    "email": "kevin@test.com",
+    "password": "password"
+}
+###
+GET http://127.0.0.1:5000/api/auth/user/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6ImtldmluIiwiZW1haWwiOiJrZXZpbkB0ZXN0LmNvbSIsImlhdCI6MTU3NzE1NDA4Nn0.uSSn6Q8IGK1xL2EcsxX3dX_3XZIuuh8lZ4UxzShZg34
+###
+GET http://localhost:5000/api/project/
+###
+POST http://127.0.0.1:5000/api/project/register/
+Content-Type: application/json
+
+{
+    "name": "テストプロジェクト2",
+    "pv": "333",
+    "visit": "894",
+    "domain": "https://www.yahoo.co.jp/",
+    "tracking": "false"
+}
